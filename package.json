@@ -16,5 +16,8 @@
     "express": "^4.17.1",
     "mongoose": "^8.24.8",
     "nodemon": "^3.1.14"
+  },
+  "overrides": {
+    "minimatch": "^11.0.5"
   }
 }

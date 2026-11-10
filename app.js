@@ -21,13 +21,9 @@ app.get('/', (req, res) => {
 });
 
 // Connect to DB
-mongoose.connect(
-    process.env.DB_CONNECTION,
-      { useNewUrlParser: true },
-  () => {
-    console.log('connection made to DB!');
-  }
-);
+mongoose.connect(process.env.DB_CONNECTION)
+  .then(() => console.log('connection made to DB!'))
+  .catch(err => console.error('DB connection failed:', err));
 
 // Listen to server:
 app.listen(3000);

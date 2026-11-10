@@ -17,7 +17,6 @@ app.use('/times', timeRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-  res.sendStatus(200);
 });
 
 // Connect to DB

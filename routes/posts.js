@@ -7,7 +7,6 @@ router.get('/', async (req, res) => {
     try {
         const posts = await POST_DB.find();
         res.send(posts);
-        res.sendStatus(200);
     } catch (err) {
         res.json(err);
         console.log('error');
